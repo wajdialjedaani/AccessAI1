@@ -1,0 +1,630 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-bar {
+    padding: 20px 0px 10px 0px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 20px;
+    row-gap: 0px;
+    border-width: 0px 0px 1px 0px;
+    border-color: transparent transparent #a8a8a8 transparent;
+    border-style: none none solid none;
+  }
+  
+  .logo-link {
+    text-decoration: none; /* Removes underline */
+    color: #008cff;
+    font-weight: bold;
+    font-size: 30px;
+    display: inline-block;
+    padding: 5px 10px;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .logo-link:hover,
+  .logo-link:focus {
+    color: #0056b3; /* Darker shade of blue on hover/focus for visibility */
+    text-decoration: none;
+  }
+  
+  
+  .nav-bar img {
+    width: 25%;
+    height: auto;
+    display: block;
+  }
+  
+  .navigation {
+    display: flex;
+    z-index: 1500;
+    height: auto;
+    width: fit-content;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding: 10px 10px 10px 10px;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 2px;
+    row-gap: 0px;
+    align-items: center;
+  }
+  
+  .nav-bar .navigation a {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    letter-spacing: 0px;
+    line-height: 26px;
+    padding: 15px 15px 15px 15px;
+    text-decoration: none;
+  }
+  
+  .navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: 3px;
+    background: #0e0e0e;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+  }
+  
+  .navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+
+
+/* Title Infomation */
+#title-info {
+    display: flex; /* Enables Flexbox */
+    flex-wrap: wrap; /* Allows items to wrap as needed, making the layout responsive */
+    justify-content: center; /* Centers items horizontally */
+    align-items: flex-start; /* Aligns items to the start of the flex container */
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .text-H h1 {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 60px;
+    padding: 0px 0px 25px 0px;
+    color: #162938;
+    margin-bottom: 20px; /* Space between the header and paragraph */
+    text-align: center;
+  }
+
+
+/* Authors */
+  .text-A {
+    display: flex;
+    align-items: center;
+    gap: 35px; 
+    padding-top: 30px;
+    padding-bottom: 35px;
+}
+
+.text-A h2 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.author-container {
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text for the author's name */
+}
+
+.author-image {
+    width: 100px; /* Adjust the width as necessary */
+    height: 100px; /* Adjust the height as necessary */
+    border-radius: 50%; /* Make the image circular, if desired */
+    object-fit: cover; /* Ensure the image covers the area without distorting */
+    margin-bottom: 10px; /* Space between the image and the author's name */
+}
+
+
+/* Date */
+.text-D {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 35px;
+}
+
+.text-D h2 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.text-D p {
+    font-size: 25px;
+    font-weight: 400;
+    padding-left: 25px;
+}
+
+
+/* Icon */
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 35px;
+}
+
+.icons a {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 70px;
+    height: 90px;
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    padding: 10px;
+    text-decoration: none; 
+    color: #000; 
+    background-color: #89c8fce3;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.icons a:hover {
+    transform: scale(1.11); /* Subtle scale */
+    filter: brightness(95%); /* Less darkening for softer effect */
+    transition: transform 0.2s ease, filter 0.2s ease;
+  }
+
+.icons img {
+    width: 30px; 
+    height: auto;
+    margin-bottom: 5px; 
+}
+
+.icons span {
+    font-size: 14px; 
+    font-weight: 500;
+    text-align: center; 
+}
+
+
+  /*Abstract */
+  .text-S {
+    margin: 0 auto; /* Center-align the content */
+    padding: 20px;
+  }
+  
+  .text-S h2, .text-S h3 {
+    color: #162938; /* Dark color for headings */
+    margin: 20px 0 10px; /* Spacing around headings */
+  }
+  
+  .text-S h2 {
+    font-size: 45px;
+    font-weight: 700;
+  }
+  
+  .text-S h3 {
+    font-size: 30px; /* Slightly smaller font size for subheadings */
+    font-weight: 600; /* Slightly less bold than h2 */
+  }
+  
+  .text-S p {
+    font-size: 22px; 
+    line-height: 1.6; 
+    margin-bottom: 15px;
+    text-align: justify; 
+  }
+  
+
+
+/* Carousel Section */
+.slideshow-container {
+    position: relative;
+    max-width: 1000px; 
+    margin: auto;
+    overflow: visible;
+    margin: 50px auto;
+}
+  
+.slide {
+    display: none;
+    width: 100%; /* Ensure the slide fills the container width */
+    height: 500px; /* Example fixed height; adjust as necessary */
+    overflow: hidden; /* Hide parts of the image that exceed the container size */
+    position: relative;
+}
+
+.slide img {
+    width: 100%; /* Full width of the slide container */
+    height: 100%; /* Full height of the slide container */
+    object-fit: cover; /* Cover the container without distortion */
+}
+  
+  
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.prev, .next {
+    
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 65px;
+    transition: 0.6s ease;
+    user-select: none;
+    z-index: 1;
+}
+
+  
+.next {
+    right: -120px;
+}
+  
+.prev {
+    left: -120px;
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+.slideshow-container:hover .prev,
+.slideshow-container:hover .next {
+    display: block; /* If arrows are designed to show only on hover */
+}
+
+.dot-container {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+
+/* Related papers Section */
+#related_papers {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: flex-start; 
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    padding-right: 390px;
+}
+
+#related_papers .text-H h2 {
+    font-size: 55px; 
+    font-weight: 700;
+    color: #162938;
+    margin: 0 0 20px 0; 
+    text-align: left;
+  }
+  
+  #related_papers .text-S {
+    padding: 0 15px;
+  }
+
+  .text-S ul {
+    list-style: none; 
+    padding-left: 0; 
+}
+
+.text-S li {
+    position: relative; 
+    padding-left: 25px; 
+    margin-bottom: 10px;
+}
+
+.text-S li::before {
+    content: '';
+    position: absolute;
+    left: 0; 
+    top: 50%; 
+    transform: translateY(-50%); /* Precisely center */
+    width: 11px;
+    height: 11px;
+    background-color: black;
+    border-radius: 50%; 
+}
+
+  
+  #related_papers .text-S a {
+    display: block;
+    font-size: 23px; 
+    line-height: 1.6;
+    color: #162938; 
+    margin-bottom: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+  }
+  
+  #related_papers .text-S a:hover, #related_papers .text-S a:focus {
+    color: #0056b3; /* Darker shade on hover/focus */
+    text-decoration: underline; /* Adds underline on hover for visual feedback */
+  }
+  
+  #related_papers .text-S p {
+    margin: 0; /* Removes default margin for direct child <p> inside <a> */
+  }
+
+
+
+
+
+/* Footer */
+.content-container footer {
+    display: flex;
+    width: 100%;
+    max-width: 1980px;
+    min-width: 20px;
+    min-height: 20px;
+    margin: 0px auto;
+    position: relative;
+    height: fit-content;
+    padding: 100px 16px 0px 16px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 64px;
+    background-color: #008cff;
+  }
+  
+  .footer-box {
+    display: flex;
+    max-width: 1200px;
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    min-height: 20px;
+    min-width: 20px;
+    margin: 0px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    column-gap: 20px;
+  }
+  
+  #footer-text {
+    display: flex;
+    margin: 0px;
+    height: fit-content;
+    min-width: 20px;
+    min-height: 20px;
+    width: fit-content;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 12px;
+  }
+  
+  #footer-text .text-H p {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    margin: 0px;
+    min-height: 10px;
+    min-width: 16px;
+    position: relative;
+    max-width: none;
+    font-size: 34px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0px;
+    line-height: 44px;
+    padding: 0px 0px 0px 0px;
+  }
+  
+  #footer-text .text-S p {
+    display: block;
+    min-height: 10px;
+    height: fit-content;
+    margin: 0px;
+    min-width: 16px;
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 28px;
+    padding: 0px 0px 20px 0px;
+    text-align: unset;
+  }
+  
+  #btn-footer {
+    display: block;
+    margin: 0px;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    padding: 12px 26px 12px 26px;
+    background-color: #ffffff;
+    border-radius: 100px 100px 100px 100px;
+    border-width: 0px 0px 0px 0px;
+    border-style: groove groove groove groove;
+    border-color: #333 #333 #333 #333;
+    font-size: 16;
+    font-weight: 700;
+    color: #162938;
+    line-height: 26px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  #btn-footer:hover {
+    background: #c1f2b0;
+    color: #162938;
+  }
+  
+  .footer-links-box {
+    display: flex;
+    margin: 0px;
+    width: 100%;
+    min-width: fit-content;
+    height: fit-content;
+    min-height: 20px;
+    max-width: 150px;
+    position: relative;
+    padding: 0px;
+    justify-content: flex-start;
+  }
+  
+  .footer-links {
+    display: flex;
+    width: fit-content;
+    min-width: 20px;
+    height: fit-content;
+    min-height: 20px;
+    position: relative;
+    align-items: flex-start;
+    row-gap: 15px;
+    flex-direction: column;
+  }
+  
+  .footer-links .text-H {
+    display: block;
+    width: fit-content;
+    min-height: 10px;
+    min-width: 16px;
+    position: relative;
+    height: auto;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 30px;
+  }
+  
+  .footer-links span a {
+    display: block;
+    height: auto;
+    min-height: 10px;
+    min-width: 16px;
+    width: fit-content;
+    position: relative;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 28px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .footer-foot {
+    display: flex;
+    max-width: 1980px;
+    height: fit-content;
+    margin: 0px;
+    min-height: 20px;
+    width: 100%;
+    position: relative;
+    min-width: 20px;
+    padding: 20px 16px 20px 16px;
+    justify-content: center;
+    align-items: center;
+    border-width: 1px 0px 0px 0px;
+    border-style: solid none none none;
+    border-color: #ffffff2d transparent transparent transparent;
+  }
+  
+  .left {
+    display: flex;
+    margin: 0px;
+    height: fit-content;
+    width: 100%;
+    max-width: 1200;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+  
+  .left .text-L {
+    display: block;
+    height: auto;
+    margin: 0px;
+    width: fit-content;
+    min-width: 16px;
+    min-height: 10px;
+    position: relative;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 14px;
+  }
+  
+  .right {
+    display: flex;
+    margin: 0px;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+  
+  .right .text-R {
+    display: block;
+    height: auto;
+    margin: 0px;
+    width: fit-content;
+    min-width: 16px;
+    min-height: 10px;
+    position: relative;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 14px;
+  }
+
+  

@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar {
+  padding: 20px 0px 10px 0px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 20px;
+  row-gap: 0px;
+  border-width: 0px 0px 1px 0px;
+  border-color: transparent transparent #a8a8a8 transparent;
+  border-style: none none solid none;
+}
+
+.logo-link {
+  text-decoration: none; /* Removes underline */
+  color: #008cff;
+  font-weight: bold;
+  font-size: 30px;
+  display: inline-block;
+  padding: 5px 10px;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.logo-link:hover,
+.logo-link:focus {
+  color: #0056b3; /* Darker shade of blue on hover/focus for visibility */
+  text-decoration: none;
+}
+
+.nav-bar img {
+  width: 110%;
+  height: auto;
+  display: block;
+}
+
+.navigation {
+  display: flex;
+  z-index: 1500;
+  height: auto;
+  width: fit-content;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  padding: 10px 10px 10px 10px;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 2px;
+  row-gap: 0px;
+  align-items: center;
+}
+
+.nav-bar .navigation a {
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  letter-spacing: 0px;
+  line-height: 26px;
+  padding: 15px 15px 15px 15px;
+  text-decoration: none;
+}
+
+.navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 100%;
+  height: 3px;
+  background: #0e0e0e;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* Title Section */
+.title {
+  display: flex; /* Enables Flexbox */
+  flex-wrap: wrap; /* Allows items to wrap as needed, making the layout responsive */
+  justify-content: center; /* Centers items horizontally */
+  align-items: flex-start; /* Aligns items to the start of the flex container */
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: left; /* Aligns text to the left; adjust as needed */
+}
+
+.text-H h1 {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 60px;
+  padding: 0px 0px 25px 0px;
+  color: #162938;
+  margin: 0 10px;
+}
+
+.text-S p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  padding: 10px 0px 20px 0px;
+  margin: 0 10px;
+  color: #4a4a4a;
+}
+
+
+/* Team Section */
+#Team {
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Vertically aligns the content */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1980px;
+  padding: 30px 30px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Aligns items to the start of the container */
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px; /* Matching .title max-width for alignment */
+}
+
+.profile-page-link {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherits text color from parent, avoiding the default blue */
+  display: block; /* Ensures the link block encloses the card */
+}
+
+
+.card {
+  flex-basis:1 0 calc(25% - 40px); /* Adjust based on gap */
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out; /* Smooth transitions for interaction */
+}
+
+.card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); 
+}
+
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover; 
+  border-radius: 10px 10px 0 0;
+}
+
+
+.card h3, .card p {
+  width: 100%; 
+  margin: 10px auto; 
+}
+
+.card .links-box {
+  display: flex;
+  justify-content: center; 
+  gap: 10px; 
+}
+
+.card .links-box .links {
+  color: #007bff;
+  font-size: 13px;
+  text-decoration: none;
+  background-color: #f8f9fa; /* Light background for links */
+  padding: 5px 10px; /* Padding for touch targets */
+  border-radius: 15px; 
+  transition: background-color 0.3s ease; 
+}
+
+.card .links-box .links:hover {
+  text-decoration: none;
+  background-color: #e7f1ff; 
+}
+
+
+@media (max-width: 1024px) {
+  .card {
+    flex-basis: calc(50% - 30px); /* Shows 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-basis: 100%; /* Stacks the cards vertically on small screens */
+    margin-bottom: 20px;
+  }
+}
+

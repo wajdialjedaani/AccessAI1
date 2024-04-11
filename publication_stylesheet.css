@@ -1,0 +1,491 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar {
+  padding: 20px 0px 10px 0px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 20px;
+  row-gap: 0px;
+  border-width: 0px 0px 1px 0px;
+  border-color: transparent transparent #a8a8a8 transparent;
+  border-style: none none solid none;
+}
+
+.logo-link {
+  text-decoration: none; /* Removes underline */
+  color: #008cff;
+  font-weight: bold;
+  font-size: 30px;
+  display: inline-block;
+  padding: 5px 10px;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.logo-link:hover,
+.logo-link:focus {
+  color: #0056b3; /* Darker shade of blue on hover/focus for visibility */
+  text-decoration: none;
+}
+
+.nav-bar img {
+  width: 110%;
+  height: auto;
+  display: block;
+}
+
+.navigation {
+  display: flex;
+  z-index: 1500;
+  height: auto;
+  width: fit-content;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  padding: 10px 10px 10px 10px;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 2px;
+  row-gap: 0px;
+  align-items: center;
+}
+
+.nav-bar .navigation a {
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  letter-spacing: 0px;
+  line-height: 26px;
+  padding: 15px 15px 15px 15px;
+  text-decoration: none;
+}
+
+.navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 100%;
+  height: 3px;
+  background: #0e0e0e;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* Title Section */
+.title {
+  display: flex; /* Enables Flexbox */
+  flex-wrap: wrap; /* Allows items to wrap as needed, making the layout responsive */
+  justify-content: center; /* Centers items horizontally */
+  align-items: flex-start; /* Aligns items to the start of the flex container */
+  max-width: 1200px;
+  margin: 50px auto 10px;
+  padding: 20px;
+  text-align: left; /* Aligns text to the left; adjust as needed */
+}
+
+.text-H h1 {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 60px;
+  padding: 0px 0px 25px 0px;
+  color: #162938;
+  margin: 0 10px;
+}
+
+.text-S p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  padding: 10px 0px 20px 0px;
+  margin: 0 10px;
+  color: #4a4a4a;
+}
+
+/* Research Highlights Section */
+#Research-highlights {
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Vertically aligns the content */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1980px;
+  padding: 20px 16px;
+}
+
+.Research-highlights-box {
+  width: 100%;
+  max-width: 1200px;
+  text-align: left; /* Centers the text */
+  padding: 0 20px; /* Adds padding on the sides */
+}
+
+.Research-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.btn-research {
+  padding: 12px 26px;
+  background-color: #008cff;
+  border: none;
+  border-radius: 100px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #efefef;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.5s;
+}
+
+.btn-research:hover {
+  background-color: #45a049;
+}
+
+.btn-research.active {
+  background-color: #45a049; /* Active state background */
+  color: #ffffff; /* Adjust text color for active state if needed */
+}
+
+#research-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the cards */
+  gap: 20px; /* Adjust the gap between cards as needed */
+  padding: 20px;
+  max-width: 1200px;
+  /* height: 350px; */
+  margin: auto; /* Center the cards container */
+  align-items: stretch;
+}
+
+.research-card-link {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherits text color from parent, avoiding the default blue */
+  display: block; /* Ensures the link block encloses the card */
+}
+
+.research-card:hover {
+  background-color: #f0f0f0;
+}
+
+
+.research-card {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, filter 0.2s ease;
+  height: auto;
+  position: relative;
+}
+
+.research-card:hover {
+  transform: scale(1.04); /* Subtle scale */
+  filter: brightness(95%); /* Less darkening for softer effect */
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+
+
+.card-img {
+  flex: 1; /* Takes up 1 portion of the flex container */
+  padding-right: 15px; /* Adds some space between the image and the text */
+}
+
+.card-img img {
+  width: 100%; /* Makes the image responsive within its container */
+  max-width: 300px; /* Adjust based on your preference */
+  height: auto;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.card-content {
+  flex: 2; /* Takes up 2 portions of the flex container, making it larger than the image area */
+}
+
+.research-card h3 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #162938;
+  /* margin-bottom: 10px; */
+  margin: 10px 0;
+}
+
+.research-card p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #162938;
+  margin: 10px 0;
+}
+
+.pdf-icon-container {
+  display: flex;
+  padding: 15px 0 5px 0;
+
+}
+
+.pdf-icon {
+  width: 25px; /* Adjust the size of the PDF icon */
+  height: auto;
+}
+
+
+
+/* Footer */
+.content-container footer {
+  display: flex;
+  width: 100%;
+  max-width: 1980px;
+  min-width: 20px;
+  min-height: 20px;
+  margin: 0px auto;
+  position: relative;
+  height: fit-content;
+  padding: 100px 16px 0px 16px;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 64px;
+  background-color: #008cff;
+}
+
+.footer-box {
+  display: flex;
+  max-width: 1200px;
+  height: fit-content;
+  width: 100%;
+  position: relative;
+  min-height: 20px;
+  min-width: 20px;
+  margin: 0px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+
+#footer-text {
+  display: flex;
+  margin: 0px;
+  height: fit-content;
+  min-width: 20px;
+  min-height: 20px;
+  width: fit-content;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 12px;
+}
+
+#footer-text .text-H p {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  margin: 0px;
+  min-height: 10px;
+  min-width: 16px;
+  position: relative;
+  max-width: none;
+  font-size: 34px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0px;
+  line-height: 44px;
+  padding: 0px 0px 0px 0px;
+}
+
+#footer-text .text-S p {
+  display: block;
+  min-height: 10px;
+  height: fit-content;
+  margin: 0px;
+  min-width: 16px;
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 28px;
+  padding: 0px 0px 20px 0px;
+}
+
+#btn-footer {
+  display: block;
+  margin: 0px;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  padding: 12px 26px 12px 26px;
+  background-color: #ffffff;
+  border-radius: 100px 100px 100px 100px;
+  border-width: 0px 0px 0px 0px;
+  border-style: groove groove groove groove;
+  border-color: #333 #333 #333 #333;
+  font-size: 16;
+  font-weight: 700;
+  color: #162938;
+  line-height: 26px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#btn-footer:hover {
+  background: #c1f2b0;
+  color: #162938;
+}
+
+.footer-links-box {
+  display: flex;
+  margin: 0px;
+  width: 100%;
+  min-width: fit-content;
+  height: fit-content;
+  min-height: 20px;
+  max-width: 150px;
+  position: relative;
+  padding: 0px;
+  justify-content: flex-start;
+}
+
+.footer-links {
+  display: flex;
+  width: fit-content;
+  min-width: 20px;
+  height: fit-content;
+  min-height: 20px;
+  position: relative;
+  align-items: flex-start;
+  row-gap: 15px;
+  flex-direction: column;
+}
+
+.footer-links .text-H {
+  display: block;
+  width: fit-content;
+  min-height: 10px;
+  min-width: 16px;
+  position: relative;
+  height: auto;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 30px;
+}
+
+.footer-links span a {
+  display: block;
+  height: auto;
+  min-height: 10px;
+  min-width: 16px;
+  width: fit-content;
+  position: relative;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 28px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footer-foot {
+  display: flex;
+  max-width: 1980px;
+  height: fit-content;
+  margin: 0px;
+  min-height: 20px;
+  width: 100%;
+  position: relative;
+  min-width: 20px;
+  padding: 20px 16px 20px 16px;
+  justify-content: center;
+  align-items: center;
+  border-width: 1px 0px 0px 0px;
+  border-style: solid none none none;
+  border-color: #ffffff2d transparent transparent transparent;
+}
+
+.left {
+  display: flex;
+  margin: 0px;
+  height: fit-content;
+  width: 100%;
+  max-width: 1200;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.left .text-L {
+  display: block;
+  height: auto;
+  margin: 0px;
+  width: fit-content;
+  min-width: 16px;
+  min-height: 10px;
+  position: relative;
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.right {
+  display: flex;
+  margin: 0px;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.right .text-R {
+  display: block;
+  height: auto;
+  margin: 0px;
+  width: fit-content;
+  min-width: 16px;
+  min-height: 10px;
+  position: relative;
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 14px;
+}
