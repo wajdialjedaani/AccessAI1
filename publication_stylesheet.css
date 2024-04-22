@@ -15,7 +15,7 @@
 }
 
 .nav-bar {
-  padding: 20px 0px 10px 0px;
+  /* padding: 20px 0px 10px 0px; */
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
@@ -42,8 +42,9 @@
   text-decoration: none;
 }
 
+
 .nav-bar img {
-  width: 110%;
+  width: 20%;
   height: auto;
   display: block;
 }
